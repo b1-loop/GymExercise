@@ -55,6 +55,32 @@
             customer2.Id = 2;
             customer2.HowToPay2();
 
+            //tillkallar flera instans av Workout klassen och sätter värden på dess egenskaper och anropar metoden WhichWorkout plus skriver ut information om passet
+            //och även tillkallar från mina andra klasser för att se tränare och brukare som är anmälda till passet
+            Workout workout1 = new Workout();
+            workout1.WorkoutType = "Yoga";
+            workout1.StartTime = 10;
+            workout1.EndTime = 11;
+            workout1.Employe = employee1.Name;
+            workout1.CustomerId = customer1.Id;
+            workout1.WhichWorkout();
+
+            Workout workout2 = new Workout();
+            workout2.WorkoutType = "Spinning";
+            workout2.StartTime = 12;
+            workout2.EndTime = 13;
+            workout2.Employe = employee2.Name;
+            workout2.CustomerId = customer2.Id;
+            workout2.WhichWorkout();
+
+            //Här har jag inte kopplat någon brukare till passet för att visa att det går att skapa pass utan brukare också
+            Workout workout3 = new Workout();
+            workout3.WorkoutType = "Zumba";
+            workout3.StartTime = 14;
+            workout3.EndTime = 15;
+            workout3.Employe = employee3.Name;
+            workout3.WhichWorkout();
+
 
 
         }
